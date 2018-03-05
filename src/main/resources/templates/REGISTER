@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <h3>Dear</h3>
+ 
+        <div>
+            Link: ${link}
+        </div>
+        <span>Sent using Velocity Template</span>
+    </body>
+</html>
