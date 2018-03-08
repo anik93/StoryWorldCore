@@ -1,4 +1,4 @@
-package com.storyworld.CORE;
+package com.storyworld;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
