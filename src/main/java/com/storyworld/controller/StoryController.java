@@ -41,9 +41,9 @@ public class StoryController {
 	}
 
 	@GetMapping("/{page}/{size}")
-	public ResponseEntity<Response<Story>> getStories(@PathVariable(value = "page") int page,
+	public Mono<ResponseEntity<Response<Story>>> getStories(@PathVariable(value = "page") int page,
 			@PathVariable(value = "size") int size) {
-		return new ResponseEntity<Response<Story>>(storyService.getStories(page, size, null), HttpStatus.OK);
+		return Mono.just(new ResponseEntity<Response<Story>>(storyService.getStories(page, size, null), HttpStatus.OK));
 	}
 
 	@GetMapping("/{page}/{size}/{text}")

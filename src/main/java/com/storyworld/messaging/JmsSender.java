@@ -13,7 +13,7 @@ public class JmsSender {
 	@Autowired
 	private JmsTemplate jmsTemplate;
 
-	@Scheduled(fixedRate = 10000)
+//	@Scheduled(fixedRate = 10000)
 	public void send() {
 		jmsTemplate.convertAndSend("test.QueueUser", new User(1, "Test"));
 	}

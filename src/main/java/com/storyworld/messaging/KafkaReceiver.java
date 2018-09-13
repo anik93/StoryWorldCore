@@ -18,7 +18,7 @@ public class KafkaReceiver {
 		return latch;
 	}
 
-	@KafkaListener(topics = "anik")
+//	@KafkaListener(topics = "anik")
 	public void receive(String something) {
 		LOG.error(something);
 		latch.countDown();

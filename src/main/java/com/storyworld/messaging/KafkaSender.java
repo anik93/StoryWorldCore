@@ -13,7 +13,7 @@ public class KafkaSender {
 
 	private String kafkaTopic = "anik";
 
-	@Scheduled(fixedRate = 10000)
+//	@Scheduled(fixedRate = 10000)
 	public void send() {
 		kafkaTemplate.send(kafkaTopic, "KAFKA");
 	}
